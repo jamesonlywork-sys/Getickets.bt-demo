@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "routes": [
+    { "src": "/", "dest": "/index.html" },
+    { "src": "/book", "dest": "/book.html" },
+    { "src": "/about", "dest": "/about.html" },
+    { "src": "/contact", "dest": "/contact.html" },
+    { "src": "/newsletter", "dest": "/newsletter.html" },
+    { "src": "/privacy", "dest": "/privacy.html" },
+    { "src": "/checkin", "dest": "/checkin.html" }
+  ]
+}

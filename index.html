@@ -1,0 +1,48 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Getickets.bt — Events in Bhutan</title>
+<link rel="stylesheet" href="/style.css"/>
+</head><body>
+<header class="header">
+  <div class="logo">Getickets.bt</div>
+  <nav class="nav">
+    <a href="#events">Events</a>
+    <a href="/about.html">About Us</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/newsletter.html">Newsletter</a>
+    <a href="/privacy.html">Privacy</a>
+    <a href="/checkin.html">Check-in</a>
+  </nav>
+</header>
+<section class="hero">
+  <h1>Find movies, concerts & festivals in Bhutan</h1>
+  <form class="search-box" onsubmit="event.preventDefault();">
+    <input type="text" placeholder="Search events or city..."/>
+    <input type="date"/>
+    <input type="number" placeholder="Tickets" min="1" max="10"/>
+    <button type="submit">Search</button>
+  </form>
+</section>
+<main class="section" id="events">
+  <h2>Featured Events</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1598387846799-9c57b2c9cb4c?q=80&w=800&auto=format&fit=crop" alt="Cinema"/>
+      <div class="pad"><h3>Paro Cinema Night</h3><div class="meta">Paro • Dec 12</div><div class="price">Nu. 150</div><button onclick="location.href='/book.html'">Book Now</button></div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?q=80&w=800&auto=format&fit=crop" alt="Festival"/>
+      <div class="pad"><h3>Thimphu Music Festival</h3><div class="meta">Thimphu • Dec 18</div><div class="price">Nu. 499</div><button onclick="location.href='/book.html'">Book Now</button></div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1557777586-6b2fab6f6efb?q=80&w=800&auto=format&fit=crop" alt="Cultural"/>
+      <div class="pad"><h3>Punakha Cultural Show</h3><div class="meta">Punakha • Dec 20</div><div class="price">Nu. 299</div><button onclick="location.href='/book.html'">Book Now</button></div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1525182008055-f88b95ff7980?q=80&w=800&auto=format&fit=crop" alt="Comedy"/>
+      <div class="pad"><h3>Bhutan Comedy Evening</h3><div class="meta">Thimphu • Dec 22</div><div class="price">Nu. 199</div><button onclick="location.href='/book.html'">Book Now</button></div>
+    </div>
+  </div>
+</main>
+<footer class="footer">© Getickets.bt — Demo only</footer>
+</body></html>
