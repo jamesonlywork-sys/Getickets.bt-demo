@@ -1,0 +1,57 @@
+
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Success — Getickets.bt</title>
+<link rel="stylesheet" href="/style.css"/>
+</head><body>
+
+<header class="header"><div class="container bar">
+  <div class="logo">Getickets.bt</div>
+  <nav class="nav">
+    <a href="/#events">Events</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+    <a href="/newsletter">Newsletter</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/checkin">Check-in</a>
+  </nav>
+</div></header>
+
+<main class="container section">
+  <div class="kicker">Success</div>
+  <h2>Your e‑ticket is ready</h2>
+  <div id="card" class="form" style="margin-top:14px">
+    <div class="qr" id="qrcode" style="margin-bottom:14px"></div>
+    <table class="table">
+      <tr><th>Ticket ID</th><td id="tId">—</td></tr>
+      <tr><th>Event</th><td id="tEvent">—</td></tr>
+      <tr><th>Name</th><td id="tName">—</td></tr>
+      <tr><th>Qty</th><td id="tQty">—</td></tr>
+      <tr><th>Status</th><td><span style="color:#065f46;font-weight:700">Valid</span></td></tr>
+    </table>
+  </div>
+  <p class="helper">We’ve emailed a copy if email is enabled.</p>
+</main>
+
+<footer class="footer"><div class="container wrap">
+  <a href="/about">About</a> • <a href="/contact">Contact</a> • <a href="/newsletter">Newsletter</a> • <a href="/privacy">Privacy</a>
+  <div style="flex-basis:100%;height:0"></div>© Getickets.bt — Demo only
+</div></footer>
+
+<script src="/qrcode.min.js"></script>
+<script>
+  const p = new URLSearchParams(location.search);
+  const id = p.get('id'); const eventName = p.get('event'); const name = p.get('name'); const qty = p.get('qty') || '1'; const email = p.get('email');
+  document.getElementById('tId').textContent = id || '—';
+  document.getElementById('tEvent').textContent = eventName || '—';
+  document.getElementById('tName').textContent = name || '—';
+  document.getElementById('tQty').textContent = qty;
+  if (id){
+    new QRCode(document.getElementById('qrcode'), { text: JSON.stringify({ ticket_id:id, event:eventName, name, qty }), width: 220, height: 220 });
+  }
+  if (email && id && eventName){
+    fetch('/api/email-ticket', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ id, event:eventName, name, email, qty }) })
+      .then(r=>r.json()).then(x=>console.log('email-ticket:',x)).catch(console.error);
+  }
+</script>
+</body></html>

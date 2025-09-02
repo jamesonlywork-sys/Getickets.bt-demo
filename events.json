@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Paro Cinema Night",
+    "city": "Paro",
+    "date": "2025-12-12",
+    "category": "Movies",
+    "price": "Nu. 150",
+    "image": "https://images.unsplash.com/photo-1598387846799-9c57b2c9cb4c?q=80&w=1000&auto=format&fit=crop"
+  },
+  {
+    "title": "Thimphu Music Festival",
+    "city": "Thimphu",
+    "date": "2025-12-18",
+    "category": "Music",
+    "price": "Nu. 499",
+    "image": "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?q=80&w=1000&auto=format&fit=crop"
+  },
+  {
+    "title": "Punakha Cultural Show",
+    "city": "Punakha",
+    "date": "2025-12-20",
+    "category": "Culture",
+    "price": "Nu. 299",
+    "image": "https://images.unsplash.com/photo-1557777586-6b2fab6f6efb?q=80&w=1000&auto=format&fit=crop"
+  },
+  {
+    "title": "Bhutan Comedy Evening",
+    "city": "Thimphu",
+    "date": "2025-12-22",
+    "category": "Comedy",
+    "price": "Nu. 199",
+    "image": "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?q=80&w=1000&auto=format&fit=crop"
+  },
+  {
+    "title": "New Year\u2019s Eve Party, Thimphu",
+    "city": "Thimphu",
+    "date": "2025-12-31",
+    "category": "Festival",
+    "price": "Nu. 799",
+    "image": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1000&auto=format&fit=crop"
+  }
+]
